@@ -17,6 +17,7 @@ const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
+db.sequelize.sync();
 
 db.users = require("./user")(sequelize, Sequelize);
 

@@ -6,24 +6,12 @@ const getUserData = (data) => {
 }
 
 const createUser = (data) => {
-    console.log(data.username, data.email, data.password);
+    // console.log(data.username, data.email, data.password);
     try {
-        db.sequelize.sync().then(db.users.create({
-            username: data.username,
-            email:data.email,
-            password:data.password
-        }))
-        .complete(function(err, createUser) {
-            if (err) {
-                console.log(error)
-                return({"message":"couldnt create user"});
-            } else {
-                return({"message": "user created successfully"})
-            }
-          })
-        return({"message": "user created successfully"})
+        db.users.create({ userName: data.username, email: data.email, password: data.password});
+        return({"message":"user created successfully"});
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         return({"message":"couldnt create user"});
     }
 }
