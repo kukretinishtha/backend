@@ -1,0 +1,22 @@
+{
+  "name": "myfirst",
+  "version": "1.0.0",
+  "description": "my first project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "author": "kukretinishtha",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5",
+    "supertest": "^6.1.6"
+  }
+}
