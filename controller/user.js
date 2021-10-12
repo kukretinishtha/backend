@@ -6,15 +6,17 @@ const getUserData = (data) => {
 }
 
 const createUser = (data) => {
-    // console.log(data.username, data.email, data.password);
-    try {
-        db.users.create({ userName: data.username, email: data.email, password: data.password});
-        return({"message":"user created successfully"});
-    } catch (error) {
-        // console.log(error)
-        return({"message":"couldnt create user"});
-    }
-}
+    return db.users.create({ userName: data.username, email: data.email, password: data.password})
+    // .then(() => {
+    //     console.log("inside then()");
+    //     return({"message":"User created successfully"});
+    //     })
+    // .catch((error) => {
+    //     console.log("inside error", `${typeof(error.message)}`);
+    //     ret                  urn(error.message);
+    // });
+};
+
 
 const updateUser = (data) => {
     return({"message": "user updated successfully"})

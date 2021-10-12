@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
+
 const [getUserData, createUser, updateUser, fixUser, deleteUser] = require("../controller/user")
 
 router.get('/userdata', (req, res) => {
   try {
     data = req.body;
-    res.status(200).send(getUserData(data));
+    result = getUserData(data);
+    res.status(200).send(result);
   } catch (error) {
     res.status(500).send({msg : "Something Went wrong", "error":error})
   }
@@ -13,6 +15,8 @@ router.get('/userdata', (req, res) => {
 router.post('/createuser', (req, res) => {
   try {
     data = req.body;
+    // result = createUser(data);
+    // console.log(result);
     res.status(200).send(createUser(data));
   } catch (error) {
     res.status(500).send("Something Went wrong", error)

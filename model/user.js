@@ -37,7 +37,7 @@ module.exports = (sequelize, Sequelize) => {
                   notNull: {
                     msg: "Password cannot be null",
                   },
-                len: [6,15]
+                len: [4,20]
             }
         },
         createdAt: Sequelize.DATE,
