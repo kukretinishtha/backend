@@ -1,20 +1,13 @@
 const db = require("../model"); 
 
+
 const getUserData = (data) => {
     console.log(data.username, data.email, data.password);
     return({"message": "fetched user data successfully"})
 }
 
 const createUser = (data) => {
-    return db.users.create({ userName: data.username, email: data.email, password: data.password})
-    // .then(() => {
-    //     console.log("inside then()");
-    //     return({"message":"User created successfully"});
-    //     })
-    // .catch((error) => {
-    //     console.log("inside error", `${typeof(error.message)}`);
-    //     ret                  urn(error.message);
-    // });
+
 };
 
 
