@@ -2,25 +2,24 @@ const db = require("../model");
 
 
 const getUserData = (data) => {
-    console.log(data.username, data.email, data.password);
-    return({"message": "fetched user data successfully"})
+    return({"data":data,"message": "fetched user data successfully"})
 }
 
 const createUser = (data) => {
-
+    return({"data":data,"message": "created user successfully"})
 };
 
 
 const updateUser = (data) => {
-    return({"message": "user updated successfully"})
+    return({"data":data,"message": "updated user successfully"})
 }
 
 const fixUser = (req, res) => {
-    return({"message": "user fixed successfully"})
+    return({"data":data,"message": "fixed user successfully"})
 }
 
 const deleteUser = (req, res) => {
-    return({"message": "user deleted successfully"})
+    return({"data":data,"message": "deleted user successfully"})
 }
 
 module.exports = [getUserData, createUser, updateUser, fixUser, deleteUser];
