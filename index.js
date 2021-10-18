@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.status(200).send('Iam up!!!')
 })
 
-app.use("/api/v1/user", user);
+app.use("/api/v1/", user);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
