@@ -1,4 +1,4 @@
-function validatePassword(Password) {
+module.exports = function validatePassword(Password) {
     if (!Password) {
         return({"status": "failure", "error": "Password cannot be empty. Please enter the password."})
     } else if (typeof Password != "string") {
