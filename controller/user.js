@@ -1,7 +1,7 @@
 const validateEmail = require("../validation/emailValidation");
 const validatePassword = require("../validation/passwordValidation");
 const validateUsername = require("../validation/usernameValidation");
-const query = require("../database/query");
+const dbQuery = require("../database/query");
 
 const getUserData = (data) => {
     return({"data":data,"message": "fetched user data successfully"})
@@ -23,9 +23,9 @@ const createUser = (data) => {
         res.status_code = 403;
         return res;
     } else {
-        
+        dbQuery(data.username, data.email, data.password);
+        return({"status": "success", "message": "user created successfully", "status_code": 200});
     }
-
 };
 
 
